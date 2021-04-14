@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import Heart from './Heart'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const containerStyle = {
+    display : 'flex',
+    flexWrap : 'wrap',
+    flexDirection: 'row',
+    padding: '50px',
 }
 
+const hearts = Array.from({length : 9})
+
+const App = () => {
+    return ( 
+        // <div style={containerStyle}>
+        //     {hearts.map( heart => <Heart />)}
+        // </div>
+        <Heart centered={true}/>
+     );
+}
+ 
 export default App;
